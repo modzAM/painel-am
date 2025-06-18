@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>modzAM - Painel</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="login-screen" id="loginScreen">
+        <h2>Login</h2>
+        <input type="text" id="username" placeholder="Usuário">
+        <input type="password" id="password" placeholder="Senha">
+        <button onclick="login()">Entrar</button>
+        <p id="loginError"></p>
+    </div>
+
+    <div class="dashboard" id="dashboard" style="display:none;">
+        <h1>Bem-vindo ao Painel AM</h1>
+        <div class="services">
+            <h2>Serviços disponíveis</h2>
+            <form id="orderForm" onsubmit="submitOrder(event)">
+                <label>Escolha o serviço:</label>
+                <select>
+                    <option>Seguidores Instagram - R$1,00/100</option>
+                    <option>Curtidas TikTok - R$1,20/100</option>
+                    <option>Visualizações Reels - R$0,80/100</option>
+                </select><br>
+                <input type="text" placeholder="Link do perfil/post" required><br>
+                <input type="number" placeholder="Quantidade" required><br>
+                <button type="submit">Fazer Pedido</button>
+            </form>
+            <p id="orderResult"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
